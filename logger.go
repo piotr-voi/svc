@@ -96,6 +96,7 @@ func WithConsoleLogger(level zapcore.Level, opts ...zap.Option) Option {
 	return func(s *SVC) error {
 		config := zap.NewProductionEncoderConfig()
 		config.EncodeTime = zapcore.RFC3339TimeEncoder
+		config.EncodeLevel = zapcore.CapitalColorLevelEncoder
 		s.zapOpts = append(s.zapOpts, opts...)
 
 		logger, atom := s.newLogger(

@@ -6,6 +6,7 @@ import (
 
 	"github.com/voi-oss/svc"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 )
 
 var _ svc.Worker = (*dummyWorker)(nil)
@@ -31,7 +32,11 @@ func (d *dummyWorker) Alive() error {
 }
 
 func main() {
-	s, err := svc.New("minimal-service", "1.0.0", svc.WithHTTPServer("9090"), svc.WithHealthz())
+	s, err := svc.New("minimal-service", "1.0.0",
+		svc.WithHTTPServer("9090"),
+		svc.WithHealthz(),
+		svc.WithConsoleLogger(zapcore.DebugLevel),
+	)
 	svc.MustInit(s, err)
 
 	w := &dummyWorker{
