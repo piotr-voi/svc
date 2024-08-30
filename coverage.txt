@@ -5,7 +5,7 @@ github.com/voi-oss/svc/examples/liveliness/main.go:20.35,24.9 3 0
 github.com/voi-oss/svc/examples/liveliness/main.go:27.37,28.18 1 0
 github.com/voi-oss/svc/examples/liveliness/main.go:28.18,30.3 1 0
 github.com/voi-oss/svc/examples/liveliness/main.go:31.2,31.12 1 0
-github.com/voi-oss/svc/examples/liveliness/main.go:34.13,49.2 5 0
+github.com/voi-oss/svc/examples/liveliness/main.go:34.13,48.2 5 0
 github.com/voi-oss/svc/examples/minimal/main.go:12.47,12.61 1 0
 github.com/voi-oss/svc/examples/minimal/main.go:13.47,13.61 1 0
 github.com/voi-oss/svc/examples/minimal/main.go:14.47,14.56 1 0
